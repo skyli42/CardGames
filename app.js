@@ -24,11 +24,13 @@ const port = 5000;
 app.set('port', port);
 http.listen(port, () => console.log(`Listening on port ${port}`));
 
+app.get("/", (req, res)=>{
+	res.sendFile(path.join(__dirname+'/client/build/index.html'))
+})
+
+
 let curGame;
-
 let players = new Map();
-
-
 io.on('connection', (socket) => {
 	console.log(`Client with id ${socket.id} connected`);
 	players.set(socket.id, new Player(socket.id));
