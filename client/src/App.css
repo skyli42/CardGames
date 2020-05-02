@@ -1,0 +1,60 @@
+.App {
+	text-align: center;
+	height: 100vh;
+}
+
+.Card{
+	width: 100px;
+	height: 150px;
+	border-radius: 15px;
+	border: 1px solid black;
+	margin: 5px;
+}
+.CardInterior{
+	position: relative;
+	top: 50%;
+	transform: perspective(1px) translateY(-50%);
+	font-size: 36px;
+}
+
+.CardInterior>img{
+	width: 25px;
+}
+
+#hand{
+	position:fixed;
+	bottom: 0;
+	width: 100%;
+	border-top: deepskyblue 3px solid;
+	height: 40%;
+	overflow:auto;
+}
+#handList{
+	list-style-type:none;
+	display:inline-block;
+}
+.handItem{
+	display: inline-block;
+	vertical-align: bottom;
+}
+.Joker{
+	font-size: 26px;
+}
+#GameContainer{
+	display:flex;
+	width: 100%;
+	justify-content: flex-end;
+	height: 60%;
+}
+
+#GameScreen{
+	background-color: lawngreen;
+	float:left;
+	flex: 0 0 60%;
+}
+#Menu{
+	float:right;
+	flex: 0 0 40%;
+	background-color:peachpuff;
+
+}
